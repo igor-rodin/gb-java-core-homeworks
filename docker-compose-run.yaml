@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  notes-app:
+    image: bellsoft/liberica-openjdk-alpine:21
+    stdin_open: true
+    tty: true
+    command: "java -classpath /opt/notes/$OUT_DIR $APP_MAIN"
+    volumes:
+      - ./out:/opt/notes/$OUT_DIR
