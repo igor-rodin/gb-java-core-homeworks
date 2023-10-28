@@ -2,7 +2,7 @@ package ru.rodin.javacore.hw4.auth.exep;
 
 public class WrongLoginException extends RuntimeException{
     public static final String SHORT_ERROR_MSG = "Логин слишком длинный";
-    public static final String FULL_ERROR_MSG = " Логин %s превышает %d символов";
+    public static final String FULL_ERROR_MSG = "Логин %s превышает %d символов";
     private int maxLength;
     private String login;
     public WrongLoginException(){
@@ -16,7 +16,6 @@ public class WrongLoginException extends RuntimeException{
 
     @Override
     public String getMessage(){
-        String message = String.format(FULL_ERROR_MSG, this.login, this.maxLength);
-        return super.getMessage() + message;
+        return String.format(FULL_ERROR_MSG, this.login, this.maxLength);
     }
 }

@@ -23,7 +23,7 @@ public class Validator {
 
         boolean isPasswordsEqual = password.equals(confirmPassword);
         if (password.length() > MAX_LOGIN_SIZE) {
-            throw new WrongPasswordException(password, MAX_LOGIN_SIZE, isPasswordsEqual);
+            throw new WrongPasswordException(password, MAX_LOGIN_SIZE, true);
         }
         if (!isPasswordsEqual) {
             throw new WrongPasswordException(password, MAX_LOGIN_SIZE, false);
