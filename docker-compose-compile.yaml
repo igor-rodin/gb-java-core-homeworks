@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  notes-app:
+    image: bellsoft/liberica-openjdk-alpine:21
+    command: "javac -sourcepath /opt/notes/$SRC_DIR -d /opt/build/$OUT_DIR /opt/notes/$APP_MAIN_PATH"
+    volumes:
+      - ./src/main/java:/opt/notes/
+      - ./out:/opt/build/$OUT_DIR
