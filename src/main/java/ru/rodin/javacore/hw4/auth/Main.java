@@ -15,10 +15,10 @@ public class Main {
         String notConfirmPassword = "passwor";
 
         try {
-            System.out.println(Auth.register(login, password, notConfirmPassword));
-            System.out.println(Auth.register(login, longPassword, confirmPassword));
-            System.out.println(Auth.register(longLogin, password, confirmPassword));
-            System.out.println(Auth.register(longLogin, password, confirmPassword));
+            System.out.println(Auth.validateCredentials(login, password, notConfirmPassword));
+            System.out.println(Auth.validateCredentials(login, longPassword, confirmPassword));
+            System.out.println(Auth.validateCredentials(longLogin, password, confirmPassword));
+            System.out.println(Auth.validateCredentials(longLogin, password, confirmPassword));
         } catch (WrongLoginException e) {
             System.out.println(e.getMessage());
         } catch (WrongPasswordException e) {
