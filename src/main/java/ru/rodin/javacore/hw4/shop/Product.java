@@ -8,7 +8,7 @@ public class Product {
 
     public Product(String title, double price) {
         productCounts++;
-        id = productCounts;
+        this.id = productCounts;
         this.title = title;
         setPrice(price);
     }
