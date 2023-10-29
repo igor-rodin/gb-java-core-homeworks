@@ -17,4 +17,14 @@ public class Order {
         this.customer = customer;
         this.products = products;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", customer=" + customer +
+                ", products=" + products +
+                ", orderDate=" + orderDate +
+                '}';
+    }
 }
